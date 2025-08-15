@@ -1,0 +1,12 @@
+name = "my-remix-app"
+main = "./server.js"
+compatibility_date = "2025-08-15"
+
+[build]
+command = "npm run build"
+
+[site]
+bucket = "./public"
+
+[vars]
+NODE_ENV = "production"
