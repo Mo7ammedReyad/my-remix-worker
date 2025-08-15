@@ -1,8 +1,6 @@
 import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration } from "@remix-run/react";
 
-export function meta() {
-  return [{ title: "My Remix on Cloudflare" }];
-}
+export const meta = () => [{ title: "Remix on Cloudflare Workers" }];
 
 export default function App() {
   return (

@@ -1,6 +1,6 @@
-name = "my-remix-app"
-main = "./server.js"
-compatibility_date = "2025-08-15"
+name = "rust-cloudflare"
+main = "./server.ts"
+compatibility_date = "2025-07-18"
 
 [build]
 command = "npm run build"

@@ -1,14 +1,7 @@
-import { createRequestHandler } from "@remix-run/cloudflare-workers";
+import { createPagesFunctionHandler } from "@remix-run/cloudflare-pages";
+import * as build from "./build";
 
-export default {
-  async fetch(request, env, ctx) {
-    try {
-      return await createRequestHandler({
-        build: await import("./build/index.js"),
-        mode: env.NODE_ENV
-      })(request, env, ctx);
-    } catch (err) {
-      return new Response("Internal Error", { status: 500 });
-    }
-  }
-};
+export const onRequest = createPagesFunctionHandler({
+  build,
+  mode: process.env.NODE_ENV,
+});

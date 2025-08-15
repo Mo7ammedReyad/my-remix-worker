@@ -1,13 +1,11 @@
 /** @type {import('@remix-run/dev').AppConfig} */
-module.exports = {
-  future: {
-    v2_routeConvention: true
-  },
+export default {
+  future: {},
   ignoredRouteFiles: ["**/.*"],
   serverModuleFormat: "esm",
   serverPlatform: "neutral",
-  server: "./server.js",
-  serverBuildPath: "build/index.js",
+  server: "./server.ts",
+  serverBuildPath: "build/server",
   publicPath: "/build/",
   assetsBuildDirectory: "public/build"
 };
