@@ -1,4 +1,4 @@
-name = "my-remix-app"
+name = "rust-cloudflare"
 main = "./server.js"
 compatibility_date = "2025-08-15"
 
