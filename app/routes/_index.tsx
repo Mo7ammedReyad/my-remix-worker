@@ -1,8 +1,15 @@
+import { json } from "@remix-run/cloudflare";
+import { useLoaderData } from "@remix-run/react";
+
+export const loader = async () => {
+  return json({ message: "Hello from Remix on Cloudflare Worker!" });
+};
+
 export default function Index() {
+  const data = useLoaderData<typeof loader>();
   return (
-    <main style={{ fontFamily: "system-ui, sans-serif", lineHeight: 1.6, padding: 24 }}>
-      <h1>Hello Remix on Cloudflare Workers! 🚀</h1>
-      <p>This is a minimal example deployed via GitHub → Cloudflare Workers.</p>
-    </main>
+    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
+      <h1>{data.message}</h1>
+    </div>
   );
 }

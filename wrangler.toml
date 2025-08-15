@@ -1,12 +1,3 @@
-name = "rust-cloudflare"
-main = "./server.ts"
-compatibility_date = "2025-07-18"
-
-[build]
-command = "npm run build"
-
-[site]
-bucket = "./public"
-
-[vars]
-NODE_ENV = "production"
+name = "remix-cloudflare-worker"
+main = "server.ts"
+compatibility_date = "2024-08-15"
